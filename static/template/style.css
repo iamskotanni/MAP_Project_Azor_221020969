@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+}
+
+nav {
+    background: #1f2937;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    padding: 30px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    max-width: 450px;
+    border-radius: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.messages {
+    margin: 20px;
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.alert.success {
+    background: #22c55e;
+    color: white;
+}
+
+.alert.error, .error {
+    background: #dc2626;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
