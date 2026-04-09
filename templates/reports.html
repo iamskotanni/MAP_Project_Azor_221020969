@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Manager Report</h1>
+
+<table>
+<tr>
+    <th>Truck</th>
+    <th>Model</th>
+    <th>Mileage</th>
+    <th>Condition</th>
+    <th>Employee</th>
+    <th>Task</th>
+    <th>Notes</th>
+    <th>Status</th>
+</tr>
+
+{% for r in report_data %}
+<tr>
+    <td>{{ r[0] }}</td>
+    <td>{{ r[1] }}</td>
+    <td>{{ r[2] }}</td>
+    <td>{{ r[3] }}</td>
+    <td>{{ r[4] }}</td>
+    <td>{{ r[5] }}</td>
+    <td>{{ r[6] }}</td>
+    <td>{{ r[7] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
