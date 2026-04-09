@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Repair Tasks</h1>
+
+<form method="post">
+    <label>Truck</label>
+    <select name="truck_id" required>
+        {% for t in trucks %}
+            <option value="{{ t[0] }}">{{ t[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Description</label>
+    <input name="description" required>
+
+    <label>Work Notes</label>
+    <textarea name="task_notes"></textarea>
+
+    <label>Mechanic</label>
+    <select name="employee_id" required>
+        {% for e in employees %}
+            <option value="{{ e[0] }}">{{ e[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Add Task</button>
+</form>
+
+<hr>
+
+<ul>
+{% for task in tasks %}
+    <li>
+        <strong>{{ task[1] }}</strong> –
+        {{ task[2] }} –
+        {{ task[5] }} –
+        {{ task[4] }} <br>
+        Notes: {{ task[3] }}
+
+        {% if task[4] != 'Completed' %}
+            <a  class="complete-link">✔ Complete</a>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}
